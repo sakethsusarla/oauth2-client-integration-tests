@@ -1,0 +1,22 @@
+server:
+  port: 4881
+
+spring:
+  security:
+    oauth2:
+      client:
+        provider:
+          external:
+            issuer-uri: http://localhost:4882/realms/external
+        registration:
+          external:
+            provider: external
+            client-name: external-client
+            client-id: external-client
+            client-secret: iUOabpoDGCyCwBWbA1OnOOJENjOtY7OX
+            client-authentication-method: client_secret_post
+            scope:
+              - openid
+              - offline_access
+              - profile
+            authorization-grant-type: authorization_code
